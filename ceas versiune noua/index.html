@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+            rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Un ceas realizat în JavaScript, cu design futurist și funcționalitate în timp real.">
+        <meta name="keywords"
+            content="JavaScript, ceas, analog, proiect, frontend, ora exactă">
+        <meta name="Pomineata Andrei" content="Andrei">
+        <link rel="icon" href="assets/img/fundal-meta.jpg">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Ceas</title>
+
+    </head>
+    <body>
+        <video src="assets/video/univers.mp4" autoplay loop
+            muted plays-inline id="background-video" type="video/mp4"></video>
+        <h1 id="year"></h1>
+        <div id="allElementWatch">
+            <div id="clock">
+                <div id="segmentName">
+                    <p>HOUR</p>
+                    <p>MINUTE</p>
+                    <p>SECOND</p>
+                </div>
+                <p id="time"></p>
+            </div>
+            <div id="details">
+                <div class="detail">
+                    <p>DAY</p>
+                    <p id="day"></p>
+                </div>
+                <div class="detail">
+                    <p>DAY OF THE WEEK</p>
+                    <p id="dayWeek"></p>
+                </div>
+                <div class="detail">
+                    <p>MONTH OF THE YEAR</p>
+                    <p id="dayMonth"></p>
+                </div>
+                <div class="detail">
+                    <p>MONTH</p>
+                    <p id="month"></p>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

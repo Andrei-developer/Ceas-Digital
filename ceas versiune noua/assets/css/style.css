@@ -1,0 +1,375 @@
+/* /////////////////////// 
+-------Resset code-------- 
+/////////////////////// */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+/* /////////////////////// 
+  -------    Root   -------- 
+  /////////////////////// */
+
+:root {
+  --black: #000000;
+  --transparent-black: #000000da;
+  --white: #ffffff;
+  --blue: #00aeff;
+  --ligth-blue: #77cdff;
+}
+
+/* /////////////////////// 
+  -------    body   -------- 
+  /////////////////////// */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Orbitron", sans-serif;
+  background-color: #000000;
+}
+
+/* /////////////////////// 
+  ----    background   ----- 
+  /////////////////////// */
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* /////////////////////// 
+  --------    h1   --------- 
+  /////////////////////// */
+
+#year {
+  color: var(--white);
+  font-size: 150px;
+  margin: 40px 0px;
+  text-shadow: 0px 0px 15px var(--white);
+  animation: transform-1 3s forwards;
+  cursor: none;
+  user-select: none;
+}
+
+@keyframes transform-1 {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/* ////////////////////////////////////// 
+  -------    Hour-Minutes-Second   -------- 
+  ////////////////////////////////////// */
+
+#clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+  user-select: none;
+  height: 350px;
+  box-shadow: 0px 0px 20px var(--ligth-blue);
+  border-radius: 20px;
+  background-color: var(--transparent-black);
+  animation: transform-2 3s forwards;
+}
+
+@keyframes transform-2 {
+  from {
+    transform: translateX(-4000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+#segmentName {
+  display: flex;
+  position: relative;
+  top: 40px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#segmentName p {
+  font-size: 40px;
+  color: #8bdaff;
+  text-shadow: 0px 0px 10px var(--ligth-blue);
+}
+
+#time {
+  font-size: 200px;
+  background: linear-gradient(
+    to top,
+    var(--blue),
+    var(--ligth-blue),
+    var(--white)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 10px var(--ligth-blue);
+}
+
+/* ////////////////////////// 
+  -------    Details   -------- 
+  ////////////////////////// */
+
+#details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  height: 300px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  width: 325px;
+  height: 150px;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px var(--ligth-blue);
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--transparent-black);
+  animation: transform-3 3s forwards;
+  cursor: none;
+  user-select: none;
+}
+
+.detail p {
+  font-size: 20px;
+  color: var(--blue);
+}
+
+#day,
+#dayWeek,
+#dayMonth,
+#month {
+  font-size: 70px;
+  color: var(--white);
+  text-shadow: 0px 0px 5px var(--white);
+}
+
+#day {
+  animation: transform-3 3s forwards;
+}
+
+#dayWeek {
+  animation: transform-3 3s forwards;
+}
+
+#dayMonth {
+  animation: transform-3 3s forwards;
+}
+
+#month {
+  animation: transform-3 3s forwards;
+}
+
+@keyframes transform-3 {
+  from {
+    transform: translateX(4000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+/* ///////////////////////////////////////////// 
+  -------    Responsive(1500px - 950px)   -------- 
+  ///////////////////////////////////////////// */
+
+@media (max-width: 1500px) and (min-width: 950px) {
+  #year {
+    margin: 20px 0px;
+  }
+
+  /* ////////////////////////////////////// 
+    -------    Hour-Minutes-Second   -------- 
+    ////////////////////////////////////// */
+
+  #allElementWatch {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0px 0px 40px 0px;
+  }
+
+  #clock {
+    height: 250px;
+    gap: 20px;
+  }
+
+  #segmentName p {
+    font-size: 25px;
+  }
+
+  #time {
+    font-size: 125px;
+  }
+
+  /* ////////////////////////// 
+    -------    Details   -------- 
+    ////////////////////////// */
+
+  #details {
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 900px;
+    height: auto;
+  }
+
+  .detail {
+    width: 425px;
+  }
+}
+
+/* //////////////////////////////////////////// 
+  -------    Responsive(950px - 650px)   -------- 
+  //////////////////////////////////////////// */
+
+@media (max-width: 950px) and (min-width: 650px) {
+  #year {
+    font-size: 100px;
+    margin: 20px 0px;
+  }
+
+  /* ////////////////////////////////////// 
+    -------    Hour-Minutes-Second   -------- 
+    ////////////////////////////////////// */
+
+  #allElementWatch {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0px 0px 40px 0px;
+  }
+
+  #clock {
+    height: 150px;
+    gap: 30px;
+  }
+
+  #segmentName p {
+    position: relative;
+    bottom: 20px;
+    font-size: 25px;
+  }
+
+  #time {
+    position: relative;
+    bottom: 20px;
+    font-size: 80px;
+  }
+
+  /* ////////////////////////// 
+    -------    Details   -------- 
+    ////////////////////////// */
+
+  #details {
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 600px;
+    height: auto;
+  }
+
+  .detail {
+    width: 275px;
+  }
+
+  .detail p {
+    font-size: 19px;
+  }
+}
+
+/* //////////////////////////////////////////// 
+  -------    Responsive(650px - 0px)   -------- 
+  //////////////////////////////////////////// */
+
+@media (max-width: 650px) {
+  #year {
+    font-size: 80px;
+    margin: 10px 0px;
+  }
+
+  /* ////////////////////////////////////// 
+    -------    Hour-Minutes-Second   -------- 
+    ////////////////////////////////////// */
+
+  #allElementWatch {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 800px;
+  }
+
+  #clock {
+    height: 100px;
+    gap: 30px;
+  }
+
+  #segmentName p {
+    position: relative;
+    bottom: 25px;
+    font-size: 10px;
+  }
+
+  #time {
+    position: relative;
+    bottom: 20px;
+    font-size: 35px;
+  }
+
+  /* ////////////////////////// 
+    -------    Details   -------- 
+    ////////////////////////// */
+
+  #details {
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 275px;
+  }
+  .detail p {
+    font-size: 19px;
+  }
+}
+
+/* /////////////////////// 
+  -------    End   -------- 
+  /////////////////////// */
